@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .control-container {
+            text-align: center;
+        }
+        .btn-on {
+            background-color: green;
+            color: white;
+            width: 120px;
+            font-size: 18px;
+        }
+        .btn-off {
+            background-color: red;
+            color: white;
+            width: 120px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="control-container">
+        <h3>Control Panel</h3>
+        <button class="btn btn-on" onclick="onFunction()">On</button>
+        <button class="btn btn-off" onclick="offFunction()">Off</button>
+    </div>
+
+    <script>
+        function onFunction() {
+            alert("The system is ON");
+        }
+
+        function offFunction() {
+            alert("The system is OFF");
+        }
+    </script>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
