@@ -14,39 +14,51 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            margin: 0;
         }
         .control-container {
             text-align: center;
             margin-bottom: 20px;
         }
+        .btn-on, .btn-off {
+            font-size: 18px;
+            width: 120px;
+            margin: 5px;
+        }
         .btn-on {
             background-color: green;
             color: white;
-            width: 120px;
-            font-size: 18px;
         }
         .btn-off {
             background-color: red;
             color: white;
-            width: 120px;
-            font-size: 18px;
         }
         .iframe-container {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 450px;
+            height: 260px;
+            border: 1px solid #cccccc;
         }
     </style>
 </head>
 <body>
-    <div class="control-container">
-        <h3>Control Panel</h3>
-        <button class="btn btn-on" onclick="onFunction()">On</button>
-        <button class="btn btn-off" onclick="offFunction()">Off</button>
-    </div>
+    <div class="container text-center">
+        <div class="control-container">
+            <h3>Control Panel</h3>
+            <button class="btn btn-on" onclick="onFunction()">On</button>
+            <button class="btn btn-off" onclick="offFunction()">Off</button>
+        </div>
 
-    <div class="iframe-container">
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2802910/widgets/1000650"></iframe>
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2802910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        <div class="iframe-container">
+            <iframe src="https://thingspeak.com/channels/2802910/widgets/1000650" title="ThingSpeak Widget"></iframe>
+            <iframe src="https://thingspeak.com/channels/2802910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" title="ThingSpeak Chart"></iframe>
+        </div>
     </div>
 
     <script>
