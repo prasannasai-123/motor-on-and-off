@@ -13,9 +13,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
         .control-container {
             text-align: center;
+            margin-bottom: 20px;
         }
         .btn-on {
             background-color: green;
@@ -29,6 +31,10 @@
             width: 120px;
             font-size: 18px;
         }
+        .iframe-container {
+            display: flex;
+            gap: 20px;
+        }
     </style>
 </head>
 <body>
@@ -36,6 +42,11 @@
         <h3>Control Panel</h3>
         <button class="btn btn-on" onclick="onFunction()">On</button>
         <button class="btn btn-off" onclick="offFunction()">Off</button>
+    </div>
+
+    <div class="iframe-container">
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2802910/widgets/1000635"></iframe>
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2802910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
     </div>
 
     <script>
